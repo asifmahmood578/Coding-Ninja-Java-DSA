@@ -1,0 +1,116 @@
+Half Diamond Pattern
+Send Feedback
+Write a program to print N number of rows for Half Diamond pattern using stars and numbers
+Note : There are no spaces between the characters in a single line.
+
+
+Input Format :
+A single integer: N
+Output Format :
+Required Pattern
+Constraints :
+0 <= N <= 50
+Sample Input 1 :
+3
+Sample Output 1 :
+*
+*1*
+*121*
+*12321*
+*121*
+*1*
+*
+Sample Input 2 :
+ 5
+Sample Output 2 :
+*
+*1*
+*121*
+*12321*
+*1234321*
+*123454321*
+*1234321*
+*12321*
+*121*
+*1*
+*
+
+Solution
+
+// import java.util.Scanner;
+// public class Solution {
+    
+//     public static void main(String[] args) {
+//         Scanner s=new Scanner(System.in);
+// 		int n=s.nextInt();
+// 		int n1=(n+1);
+// 		int n2=n;
+// 		int i=1;
+// 		while(i<=n1) {
+// 			int star=1;
+// 			while(star<=1) {
+// 				System.out.print("*");
+// 				star++;
+// 			}
+// 			int num=1;
+// 			while(num<=2*i-3) {
+// 				System.out.print(num);
+// 				num++;
+// 			}
+// 			System.out.println();
+// 			i++;
+// 		}
+        
+//     }
+// }
+
+import java.util.Scanner;
+public class Solution {
+    
+    public static void main(String[] args) {
+        // Write your code here
+        Scanner s = new Scanner(System.in);
+        int n=s.nextInt();
+        System.out.println("*");
+        int cr=1;
+        while(cr<=n)
+        {
+            System.out.print("*");
+            int cc=1;
+            while(cc<=cr)
+            {
+                System.out.print(cc);
+                cc +=1;
+                
+            }
+            cc=cc-2;
+            while(cc>=1){
+                System.out.print(cc);
+                cc -=1;
+            }
+            System.out.print("*");
+            System.out.println();
+            cr +=1;
+        }
+        cr=1;
+        while(cr<=n-1)
+        {
+            System.out.print("*");
+            int cc=1;
+            while(cc<=n-cr){
+                System.out.print(cc);
+                cc +=1;
+            }
+            cc=cc-2;
+            while(cc>=1)
+            {
+                System.out.print(cc);
+                cc -=1;
+            }
+            System.out.println("*");
+            cr +=1;
+        }
+        System.out.print("*");
+        
+    }
+}
